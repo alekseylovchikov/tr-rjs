@@ -1,0 +1,140 @@
+@import '../mixins';
+
+$text      : #fff;
+
+$green_bg  : #4CAF50;
+$purple_bg : #7986CB;
+$grey_bg   : #9B9B9B;
+$filter_bg : #00ACC1;
+$add_bg    : #3F51B5;
+$danger_bg : #ff9797;
+
+$shadow    : rgba(0,0,0,.26);
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  color: $text;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  letter-spacing: .5px;
+  margin-right: 14px;
+  transition: box-shadow .3s ease-in-out, color .3s ease-in-out, background .3s ease-in-out;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+
+  &.btn-right {
+    float: right;
+  }
+
+  &.default {
+    background: #E8E8E8;
+    padding: 10px 16px;
+    color: #535353;
+    font-weight: 500;
+    &:hover {
+      @include box-shadow($shadow);
+    }
+  }
+
+  &.add {
+    background: $add_bg;
+    padding: 10px 12.17px;
+    .btn-icon {
+      float: left;
+      margin-right: 4px;
+      margin-left: 0;
+    }
+    &:hover {
+      @include box-shadow($shadow);
+    }
+  }
+
+  &.prove {
+    background: $add_bg;
+    padding: 10px 12px;
+    display: inline-block;
+    margin-left: 12px;
+    &:hover {
+      @include box-shadow($shadow);
+    }
+  }
+
+  &.success {
+    padding: 10px 16px;
+    background-color: $green_bg;
+    &:hover {
+      @include box-shadow($shadow);
+    }
+  }
+
+  &.cancel {
+    background: none;
+    padding: 10px 12px;
+    color: $grey_bg;
+    &:hover {
+      background: rgba($grey_bg, .2);
+    }
+  }
+
+  &.danger {
+    background: none;
+    padding: 10px 12px;
+    color: $danger_bg;
+    &:hover {
+      background: rgba($danger_bg, .2);
+    }
+    &.confirm {
+      background: #FF7C7C;
+      color: #fff;
+      &:hover {
+        @include box-shadow($shadow);
+      }
+    }
+  }
+
+  &.filter {
+    background: $filter_bg;
+    text-transform: lowercase;
+    font-size: 1.1em;
+    font-weight: 300;
+    .btn-icon {
+      float: right;
+    }
+  }
+
+  &.filters {
+    background: #EFEFEF;
+    color: #4A4A4A;
+    font-size: 13px;
+    text-transform: none;
+    margin-right: 8px;
+    font-style: italic;
+    font-weight: 400;
+    padding: 7.5px 11.6px;
+    .btn-icon {
+      float: right;
+    }
+    &:hover {
+      color: #00ACC1;
+      .btn-icon {
+        color: #00ACC1;
+      }
+    }
+    .btn-icon {
+      color: #9B9B9B;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

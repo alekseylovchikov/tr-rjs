@@ -1,0 +1,125 @@
+// @font-face {
+//   font-family: 'Roboto';
+//   src: url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/fonts/roboto/Roboto-Regular.eot'); /* IE9 Compat Modes */
+//   src: url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//   url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/fonts/roboto/Roboto-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+//   url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/fonts/roboto/Roboto-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+//   url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/fonts/roboto/Roboto-Regular.ttf')  format('truetype'),
+//   url('http://www.onereit.ca/assets/fonts/roboto/Roboto-Regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.breadcrumb {
+  color: #c7c7c7;
+  text-decoration: none;
+  &:hover {
+    color: #00ACC1;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1d2e3b;
+
+  h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 100;
+
+    animation: animationFrames linear 0.8s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+  }
+}
+
+.form-input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #4A4A4A;
+  &:focus {
+    outline: 0;
+  }
+  &::-webkit-input-placeholder {
+   color: #9B9B9B;
+  }
+}
+
+// responsive
+
+@media screen and (max-width: 661px) {
+  .navbar {
+    .navbar--switch-menu {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 344px) {
+  .navbar {
+    .logo {
+      #logo-text {
+        display: none;
+      }
+    }
+  }
+}
+
+// animations
+
+@keyframes backgroundAnimate {
+  from {
+    background: #1d2e3b;
+  }
+  50% {
+    background: #1ca87c;
+  }
+  to {
+    background: #1d2e3b;
+  }
+}
+
+@keyframes animationFrames{
+  0% {
+    transform:  translate(0px, 0px);
+  }
+  15% {
+    transform:  translate(-10px, 0px);
+  }
+  30% {
+    transform:  translate(0px, 0px);
+  }
+  45% {
+    transform:  translate(10px, 0px);
+  }
+  60% {
+    transform:  translate(0px, 0px);
+  }
+  75% {
+    transform:  translate(-10px, 0px);
+  }
+  100% {
+    transform:  translate(0px, 0px);
+  }
+}

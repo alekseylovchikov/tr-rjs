@@ -1,0 +1,55 @@
+.select {
+  position: relative;
+  height: 55px;
+  span {
+    font-size: 13px;
+    color: #B6B6B6;
+  }
+  ul.opened {
+    width: 499px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);
+    position: absolute;
+    top: 0;
+    left: -19px;
+    z-index: 999;
+    li {
+      padding: 15px 17px;
+    }
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    li {
+      padding: 6px 0;
+      display: none;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      position: relative;
+      color: #5C5C5C;
+      .shape {
+        position: absolute;
+        right: 0;
+        bottom: 6px;
+        svg {
+          width: 10px;
+          height: 5px;
+        }
+      }
+    }
+    .show {
+      display: block;
+      border-bottom: 1px solid transparent;
+    }
+    .active {
+      display: block;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .show.active {
+      background: #eee;
+    }
+  }
+}

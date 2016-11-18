@@ -1,0 +1,108 @@
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,.3);
+  z-index: 999;
+  &--actions {
+    position: relative;
+    .close-modal {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      cursor: pointer;
+      color: #575757;
+    }
+  }
+  &--modal {
+    background: #fff;
+    min-width: 712px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 3px rgba(0,0,0,.3);
+    padding: 22px;
+    &--confirm {
+      background: #fff;
+      min-width: 362px;
+      min-height: 157px;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 2px 3px rgba(0,0,0,.3);
+      padding: 22px;
+      h3 {
+        color: #4A4A4A;
+        font-size: 18px;
+        font-weight: 400;
+        a {
+          color: #00ACC1;
+          text-decoration: none;
+        }
+      }
+      &--content {
+        margin-top: 13px;
+        span {
+          font-size: 15px;
+          color: #5C5C5C;
+        }
+      }
+      &--actions {
+        margin-top: 35px;
+      }
+    }
+    .file-info {
+      color: #9B9B9B;
+      font-size: 14px;
+      margin-left: 8px;
+      font-weight: 300;
+    }
+    .verified-info {
+      margin-top: 2rem;
+      span {
+        color: #9B9B9B;
+        font-size: 18px;
+        .not-verified {
+          vertical-align: middle;
+          width: 34px;
+          height: 34px;
+          margin-right: 4px;
+        }
+        a {
+          color: #00ACC1;
+          text-decoration: none;
+        }
+      }
+    }
+    h3 {
+      color: #575757;
+      font-weight: 400;
+      &:nth-child(4) {
+        margin: 20px 0 10px 0;
+      }
+    }
+  }
+  &--form {
+    position: relative;
+    width: 92%;
+    input[type="text"] {
+      color: #575757;
+    }
+    .copy {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      cursor: pointer;
+      &--icon {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+}
